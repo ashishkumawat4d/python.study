@@ -102,9 +102,11 @@ c = "abc"
 
 d = "ashish"
 
-print(d[0])
-print(d[1])
-print(d[2])
-print(d[3])
-print(d[4])
-print(d[5])
+print(d[0])  # a
+print(d[1])  # s
+print(d[2])  # h
+print(d[3])  # i
+print(d[4])  # s
+print(d[5])  # h
+
+
