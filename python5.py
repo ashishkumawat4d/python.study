@@ -38,7 +38,7 @@ for i in range(1,11):
 
 # Q5 Sum up to n terms
 
-n = int(input("enter your value"))
+n = int(input("(Sum up to n terms),enter your value"))
 
 sum = 0
 
@@ -47,13 +47,32 @@ for i in range(1,n+1):
 
 print(f"your sum is {sum}")
 
+
+
+
 #  Q5 - Factorial of a number
 
-n = int(input("enter your number"))
+
+
+
+
+
+
+
+n = int(input("(Factorial of a number),enter your number"))
 
 fact = 1
 
 for i in range(1,n+1):
-    fsct = fact * i
+    fact = fact * i
 
 print(f"your factorial is {fact}")
+
+
+
+
+
+
+
+
+
