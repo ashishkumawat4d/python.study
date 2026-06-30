@@ -5,18 +5,18 @@
 
 
 
-# 
-# n = int(input("enter your number"))
-# 
-# even = 0
-# odd = 0
-# for i in range(1,n+1):
-#     if i%2 == 0:
-#         even = even + i
-#     else:
-#         odd = odd + i
-#         
-# print(f"your even and odd sum are {even} , {odd}")
+
+n = int(input("enter your number"))
+
+even = 0
+odd = 0
+for i in range(1,n+1):
+    if i%2 == 0:
+        even = even + i
+    else:
+        odd = odd + i
+        
+print(f"your even and odd sum are {even} , {odd}")
 
 
 
@@ -29,51 +29,62 @@
 
 
 
-# 
-# n = int(input("which number factors you want"))
-# 
-# for i in range(1,n+1):
-#     if n%i == 0:
-#         print(i)
-#     
-# 
 
-# Q8- Accept a number and check if it a perfect number or not.
-#     (A number whose sum of factors is equal to the number itself)
-#      example 6 = 1+2+3
+n = int(input("which number factors you want"))
 
-# 
-# n = int(input("check your number is perfect or not"))
-# 
-# sum = 0
-# for i in range(1,n):
-#     if n%i == 0:
-#         sum = sum + i
-# 
-# if sum == n:
-#     print("your number is perfect")
-# else:
-#     print("not a perfect number")
-# 
+for i in range(1,n+1):
+    if n%i == 0:
+        print(i)
+
+
+
+
+
+
+
+
+    
+
+#    Q8- Accept a number and check if it a perfect number or not.
+#        (A number whose sum of factors is equal to the number itself)
+#         example 6 = 1+2+3
+
+
+
+
+
+
+n = int(input("check your number is perfect or not"))
+
+sum = 0
+for i in range(1,n):
+    if n%i == 0:
+        sum = sum + i
+
+if sum == n:
+    print("your number is perfect")
+else:
+    print("not a perfect number")
+
 
 
 
 #Q9- Check wether the number is prime or not
 
 
-# n = int(input("check your number is prime or not :"))
-# 
-# count = 0
-# 
-# for i in range(1,n+1):
-#     if n%1 == 0:
-#         count = count + 1
-# 
-# if count == 2:
-#     print("your number is prime")
-# else: 
-#     print("your number is not prime")
-# 
+n = int(input("check your number is prime or not :"))
+
+count = 0
+
+for i in range(1,n+1):
+    if n%1 == 0:
+        count = count + 1
+
+if count == 2:
+    print("your number is prime")
+else: 
+    print("your number is not prime")
+
 
 #  Q10-Reverse a string without using in build functions.
 
@@ -93,7 +104,7 @@ print(b)
 
 
 
-# Q!!- Check string is Pallindrome or not
+# Q11- Check string is Pallindrome or not
 
 
 
@@ -108,3 +119,23 @@ if b == a:
     print("your string is paliandrome")
 else:
     print("its not a paliandrome")
+
+
+
+# Q12 Count all letters, digits, and special symbols from a given
+#     string
+
+a = "ASHISH"
+
+char = 0
+alpha = 0
+dig = 0
+
+for i in a:
+    if i.isdigit():
+        dig +=1
+    elif i.isalpha:
+        alpha +=1
+    else:
+        char +=1
+print(f"{alpha} alphabet,{char} character,{dig} digits")
