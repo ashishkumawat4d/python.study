@@ -118,7 +118,7 @@ elif gen == 'F':
     print("goog morning mam")
 
 else:
-    print("why are you gay")
+    print("unknown,gender")
 
 
 #  Q3. Accept an integer and check whether it is an even number
