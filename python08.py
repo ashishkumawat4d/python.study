@@ -1,7 +1,22 @@
 #            Data Structures
+
+#            1.Custom data structures
+
+#            there are some custom data structures as well like
+#            Stack, Queue, Linked List, Graph etc.
+
+#            And around these data structures there are some algorithms
+#            like searching algorithms, sorting algorithms.
+
+#            And this is why the study is called data structures and
+#            algorithmD
+            
+            
+#            NOTE - Lets be clear this python notes are not for the DSA this will
+#            cover all the in-build data structures.
+
            
-           
-#            1.In-build data structures
+#            2.In-build data structures
 
 
 
@@ -12,6 +27,7 @@
             
 #            Now in python we have 4 types of in-build data structure
 #            List, Tuple, Dictionary, Set.
+
 
 
 
@@ -846,3 +862,20 @@ for i in a:
 
 
 print(d)
+
+
+#  Q4.  Write a Python program to combine two dictionary by adding
+#       values for common keys.
+
+
+
+
+d1 = {10:100,20:200,30:300}
+d2 = {40:400,50:500,60:600}
+
+for i in d2:
+    if i in d1.keys():
+        d1[i] += d2[i]
+    else:
+        d1[i] = d2[i]
+
