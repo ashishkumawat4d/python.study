@@ -4,7 +4,6 @@ print("hello world ")
 #                comments (we have to use '#' for writing a comment in python)
 
 
-
 #                Variables in python
        
        
