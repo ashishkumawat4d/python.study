@@ -6,7 +6,6 @@
 
 
 
-
 #           Types of conditional statements
 
   
