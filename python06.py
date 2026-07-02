@@ -1,141 +1,125 @@
-# Q6 - Print the sum of all even & odd numbers in a range
-#      separately
+#             While loop
+
+#      The while loop repeats a block of code as long as a condition
+#      is True. It is useful when the number of iterations is unknown
+#      before execution
+#      
+#      it also have break, continue and else.
+
+# EXAMPLE
+
+a = 0
+
+while a <= 30:
+    print(a)
+    a = a + 1
+     
+
+
+#      While loop questions
+
+
+
+
+
+#  Q1 Separate each digit of a number and print it on the new line
 
 
 
 
 
 
-n = int(input("enter your number"))
+a = int (input("tell your number"))
 
-even = 0
-odd = 0
-for i in range(1,n+1):
-    if i%2 == 0:
-        even = even + i
-    else:
-        odd = odd + i
-        
-print(f"your even and odd sum are {even} , {odd}")
+while a > 0:
+    print(a % 10)
+    a = a//10
 
+
+
+
+
+
+
+
+#  Q2 Accept a number and print its reverse
+
+
+
+
+
+
+a = int(input("tell your number to reverse"))
+
+rev = 0
+
+while a > 0:
+    rev = rev * 10 + a % 10
+    a = a //10
+
+print(rev)
+
+
+
+
+
+
+
+
+
+# Q3 Accept a number and check if it is a pallindromic number (If
+#    number and its reverse are equal)
+
+a = int(input("pallindromic number check "))
+
+copy = a
+rev = 0
+
+while a > 0:
+    rev = rev * 10 + a % 10
+    a = a //10
+
+if copy == rev:
+    print("pallindromic number")
+
+else:
+    print("not a pallindromic number")
+
+
+
+
+# Q4 Create a random number guessing game with python.
+
+import random
+
+num = random.randint(1,10)
+
+tries = 0
+
+
+while True:
+  guess = int(input("please guess your number"))
+
+  if num == guess:
+      tries +=1
+      print(f"you are right, you guessed the number in {tries} tries")
+      break
+  
+  elif num < guess:
+      print("go a little low ")
+      tries +=1
+
+  elif num > guess:
+      print("go a little higher")
+      tries +=1
+
+
+  else:
+     tries +=1
+     print("you are wrong")
+    
 
 
 
     
 
-
-#  Q7- Print all the factors of a number
-
-
-
-
-
-n = int(input("which number factors you want"))
-
-for i in range(1,n+1):
-    if n%i == 0:
-        print(i)
-
-
-
-
-
-
-
-
-    
-
-#    Q8- Accept a number and check if it a perfect number or not.
-#        (A number whose sum of factors is equal to the number itself)
-#         example 6 = 1+2+3
-
-
-
-
-
-
-n = int(input("check your number is perfect or not"))
-
-sum = 0
-for i in range(1,n):
-    if n%i == 0:
-        sum = sum + i
-
-if sum == n:
-    print("your number is perfect")
-else:
-    print("not a perfect number")
-
-
-
-
-#Q9- Check wether the number is prime or not
-
-
-n = int(input("check your number is prime or not :"))
-
-count = 0
-
-for i in range(1,n+1):
-    if n%1 == 0:
-        count = count + 1
-
-if count == 2:
-    print("your number is prime")
-else: 
-    print("your number is not prime")
-
-
-#  Q10-Reverse a string without using in build functions.
-
-
-a = "ASHISH"
-
-print(a[::-1])
-
-# USING FOR LOOP
-
-a = "ASHISH"
-b = ""
-for i in range(len(a)-1,-1,-1):
-    b = b + a[i]
-   
-print(b)
-
-
-
-# Q11- Check string is Pallindrome or not
-
-
-
-
-
-a = "naman"
-b = ""
-for i in range(len(a)-1,-1,-1):
-    b = b + a[i]
-   
-if b == a:
-    print("your string is paliandrome")
-else:
-    print("its not a paliandrome")
-
-
-
-# Q12 Count all letters, digits, and special symbols from a given
-#     string
-
-a = "ASHISH"
-
-char = 0
-alpha = 0
-dig = 0
-
-for i in a:
-    if i.isdigit():
-        dig +=1
-    elif i.isalpha:
-        alpha +=1
-    else:
-        char +=1
-print(f"{alpha} alphabet,{char} character,{dig} digits")
