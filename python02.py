@@ -80,6 +80,7 @@ print(type(a))
 #                                                       bool()       Boolean
 
 
+
 #                                Input and output
 
 #               
