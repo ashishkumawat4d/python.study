@@ -3,7 +3,6 @@
 
 
 
-
 #              Loops in python
             
 #              Loops in Python allow us to execute a block of code multiple
@@ -199,18 +198,3 @@ for i in range(1,21,1):
 
 else:
     print(i and ("break statement is not executed"))
-
-
-
-
-
-#               For Loop questions
-
-#  Q1 Accept an integer and Print hello world n times
-
-n = int(input("enter the value of n"))
-
-for i in n == range(n+1):
-    print("hello!,world")         
-
-    
