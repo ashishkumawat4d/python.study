@@ -349,7 +349,7 @@ class car:
 
 
 
-#                              1.INHERITANCE
+#    ----------------------------------- 1.INHERITANCE ---------------------------------------
 
 
 
@@ -569,3 +569,286 @@ class factorydelhi(factorymumbai):
 obj = factorydelhi("corton",3,"blue",2)
 
 print(obj.material)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#    -------------------- 2. POLYMORPHISM -----------------------------
+
+
+
+
+#   Polymorphism - 
+#                  Polymorphism is a core concept in Object-Oriented Programming
+#                  (OOP). The word means "many forms" — and in programming, it
+#                  allows the same interface or method name to behave differently
+#                  depending on the object or context.
+
+
+
+
+#  Types of Polymorphism -
+
+#                  Polymorphism can be achieved in python in two ways well if we
+#                  talk about compile time languages there are 3 ways but python
+#                  does not support Method overloading.
+
+#                  Method overloading means having same name methods inside a
+#                  class but parameters will be different but in python the latest
+#                  definition will overwrite the previous one.
+
+
+
+#      1.METHOD OVERRIDING -
+
+#                   This is where a child class overrides a method of the parent
+#                   class, and Python decides at runtime which method to call,
+#                   based on the object type.
+
+#         EXAMPLE:
+
+
+
+
+class Animal:
+    def sound(self):
+        print("Animal makes a sound")
+
+
+class Dog:
+    def sound(self):
+        print("dog barks!!")   #<---------this will overwrite the previous method
+
+    
+
+
+
+
+#     2.DUCK TYPING -
+
+#                   Python follows the philosophy:
+                  
+#                   "If it walks like a duck and quacks like a duck, it must be a
+#                   duck."
+
+
+#                   Duck typing is a concept in Python where an object's suitability
+#                   is determined by what it can do (its methods and attributes),
+#                    not by what class it belongs to.
+
+
+
+class Duck:
+    def speak(self):
+        print("Quack Quack")
+
+class Dog:
+    def speak(self):
+        print("Woof Woof")
+
+def make_sound(animal):
+    animal.speak()
+
+duck = Duck()
+dog = Dog()
+
+make_sound(duck)
+make_sound(dog)
+
+
+
+
+
+
+#     -------------- 3. ENCAPSULATION  ------------------------------
+
+
+
+#    Encapsulation -
+
+#      Encapsulation means putting data (variables) and code (functions)
+#      together in one place — inside a class.
+     
+     
+#      It also means hiding the internal details of how things work, and
+#      only showing what is needed.
+     
+#      It keeps data safe from being changed by mistake.
+#      It makes your code clean and easy to use.
+#      It gives control over what others can access or change.
+
+
+
+
+#   Access modifiers in python -
+
+#     Access modifiers means how we give access of our attributes
+#     and methods to the object or inherited classes. There are 3 types
+
+ 
+
+#  1.Public Attributes and Methods-
+
+
+
+#     Till now every attribute and methods we have created are
+#     public means the inherited classes and objects can access
+#     them no matter what.
+
+
+
+
+#  2.protected Attributes and Methods.
+
+
+#    python protected members are created using a single
+#    underscore but it still can be accessed from outside the
+#    class so you might wonder whats the point of using them
+#    Python doesn’t enforce protected access like other
+#    languages (e.g., Java or C++). But it uses a naming
+#    convention to tell developers.
+
+
+
+
+#  3.Private Attributes and Method
+
+#    A private variable or method means:
+#    It cannot be accessed from outside the class — only from
+#    inside the class where it is defined.
+
+#    In Python, we use two underscores (__) before the name to
+#    make it private.
+
+
+
+#  Example:
+
+class Factory:
+    __a = "mumbai"
+
+    def __show(self):
+       print("mumbai")     #<-------- now It cannot be accessed from outside the class
+
+
+
+
+# so how TO access these private attribute  and methods --
+
+class Factory:
+    __a = "mumbai"
+
+    def show(self):
+       print(Factory.__a)     #<-------- now It cannot be accessed 
+
+
+obj = Factory()
+
+obj.show()
+
+
+
+
+
+
+
+
+#  ----------------4.Abstraction ----------------------
+
+
+
+#        Abstraction
+       
+#        Abstraction does not exist in python but we can achieve it using a
+#        library we will see what is a library later.
+       
+#        Abstraction is used to simplifying complex systems by focusing
+#        on essential features and hiding unnecessary details
+       
+#        It is used to define a common interface for different subclasses.
+       
+       
+       
+       
+       
+#        Abstract classes and methods
+       
+#        Abstract classes are classes that contains one or more abstract
+#        methods.
+       
+#        A method that is defined but not implemented in the abstract
+#        class. subclasses must provide the implementation.
+
+
+#     Explanation 
+
+# Example:
+
+class Square:
+    def __init__(self,side):
+        self.side = side
+
+    
+class circle:
+    def __init__(self,radius):
+        self.radius = radius
+        
+
+#      Now we want all classes to have a common structure and follow 
+#      the same set of rules. To achieve this, we create an abstract
+#      class and make the other classes inherit from it. This ensures
+#      that every derived class follows the rules defined in the abstract class.
+
+
+
+
+from abc import ABC, abstractmethod
+
+
+class abstract(ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+    @abstractmethod
+    def area(self):
+        pass
+
+
+
+
+
+#we will make the other classes inherit from it
+
+
+class Square(abstract):
+    def __init__(self,side):
+        self.side = side
+    def perimeter(self):
+        print("now i have created the method")
+
+    def area(self):
+        print("i have created this area method")
+    
+class circle(abstract):
+    def __init__(self,radius):
+        self.radius = radius
+
+    def perimeter(self):
+        print("i have created")
+
+    def area(self):
+        print("i have created this area method")
+        
+
+obj = circle(9)
+obj2 = Square(9)
