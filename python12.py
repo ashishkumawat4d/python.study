@@ -852,3 +852,145 @@ class circle(abstract):
 
 obj = circle(9)
 obj2 = Square(9)
+
+
+
+
+
+
+
+#            What are Dunder methods
+
+
+
+#        Dunder methods are special methods in Python that start and
+#        end with double underscores, like __init__, __str__, __add__, etc.
+
+#        these methods let you define how your objects behave with buil in python operations>
+
+#        They automatically get called when you perform certain actions
+#        on an object.
+
+
+#        They help us -
+
+#        Customize behavior of your class
+#        Make our class objects behave like built-in data types (like
+#        strings, lists, etc.
+
+
+
+
+#  Examples:
+
+
+class Animal:
+    def __init__(self,age,name):
+        self.age = age
+        self.name = name
+
+    def __str__(self):
+        return f"hello this is a dunder method and your name is {self.name}"
+    
+
+obj = Animal(12,"lion")
+
+print(obj)
+
+
+
+
+
+
+
+
+class Animal:
+    def __init__(self,age,name):
+        self.age = age
+        self.name = name
+
+    def __str__(self):
+        return f"hello this is a dunder method and your name is {self.name}"
+    
+    def __add__(self, other):
+        return f"your sum of ages are {self.age + other.age}"
+        pass
+
+
+obj = Animal(12,"lion")
+obj2 = Animal(11,"tiger")
+
+print(obj + obj2)
+
+
+
+
+# sum for three objects
+
+
+
+
+
+class Animal:
+    def __init__(self,age,name):
+        self.age = age
+        self.name = name
+
+    def __str__(self):
+        return f"hello this is a dunder method and your name is {self.name}"
+    
+    def __add__(self, other):
+        sum = 0
+        for i in other:
+            sum = sum + i.age
+        return f"your sum of ages are {self.age + sum}"
+        pass
+
+
+obj1 = Animal(12,"lion")
+obj2 = Animal(11,"tiger")
+obj3 = Animal(23,"elephent")
+
+
+print(obj1 + (obj2,obj3))
+
+
+
+
+
+#         Most Important Dunder (Magic) Methods in Python
+
+#      1. __init__()      → Constructor; initializes an object.
+#      2. __str__()       → Returns a user-friendly string representation.
+#      3. __repr__()      → Returns an official string representation for developers.
+#      4. __len__()       → Returns the length of an object.
+#      5. __getitem__()   → Accesses an item using indexing (obj[index]).
+#      6. __setitem__()   → Sets an item using indexing (obj[index] = value).
+#      7. __delitem__()   → Deletes an item using indexing (del obj[index]).
+#      8. __contains__()  → Checks membership using the `in` operator.
+#      9. __iter__()      → Returns an iterator object.
+#      10. __next__()     → Returns the next item during iteration.
+#      11. __add__()      → Overloads the `+` operator.
+#      12. __sub__()      → Overloads the `-` operator.
+#      13. __mul__()      → Overloads the `*` operator.
+#      14. __truediv__()  → Overloads the `/` operator.
+#      15. __eq__()       → Overloads the `==` operator.
+#      16. __lt__()       → Overloads the `<` operator.
+#      17. __gt__()       → Overloads the `>` operator.
+#      18. __call__()     → Makes an object callable like a function.
+#      19. __getattr__()  → Called when an attribute is not found.
+#      20. __setattr__()  → Called whenever an attribute is assigned.
+#      21. __enter__()    → Executed when entering a `with` block.
+#      22. __exit__()     → Executed when exiting a `with` block.
+#      23. __new__()      → Creates a new object before `__init__()`.
+#      24. __del__()      → Destructor; called when an object is about to be destroyed.
+#      25. __hash__()     → Returns the hash value of an object.
+#      26. __bool__()     → Returns the Boolean value of an object.
+ 
+
+
+
+
+
+
+
