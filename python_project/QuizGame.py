@@ -12,6 +12,8 @@ questions = [
 
 answers = ["A", "B", "C", "B", "D"]
 
+
+
 options = [
     ["A. Delhi", "B. Mumbai", "C. Jaipur", "D. Kolkata"],
     ["A. Java", "B. Python", "C. C++", "D. HTML"],
@@ -38,7 +40,9 @@ for i in range(len(questions)):
         print("Wrong Answer")
         print("Correct Answer is:", answers[i])
 
+
 print()
 print("Quiz Finished")
 print("Your Score:", score, "/", len(questions))
+
 
