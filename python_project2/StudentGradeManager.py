@@ -7,7 +7,7 @@ while True:
     print("press 4 to delete a student's record.")
     print("press 5 to Search Students")
     print("press 6 to count student")
-    #  print("press 7 to find highest and lowest scorer ")
+    print("press 7 to find highest and lowest scorer ")
     
     
     
@@ -73,18 +73,28 @@ while True:
         print(len(D))
 
 
-    # if check == 7:
-        
+    if check == 7:
+        highest_marks = -1
+        lowest_marks = 301
 
+        highest_student = ""
+        lowest_student = ""
+        for name, marks in D.items():
+            total = marks["maths"] + marks["science"] + marks["english"]
+
+            if total > highest_marks:
+             highest_marks = total
+             highest_student = name
+
+            if total < lowest_marks:
+                lowest_marks = total
+                lowest_student = name
+        print("Highest Scorer:", highest_student, highest_marks)
+        print("Lowest Scorer:", lowest_student, lowest_marks)
+    
+        
+        
 
 
     
-
-        
-
-        
-
-
-
-
-             
+    
