@@ -149,9 +149,9 @@ def view_notes():
 
 
 while True:
-    print("\n1. Add Note")
-    print("2. View Notes")
-    print("3. Exit")
+    print("\npress 1 to Add Note")
+    print("press 2 to View Notes")
+    print("press 3 to Exit")
 
     choice = input("Enter choice: ")
 
@@ -160,6 +160,7 @@ while True:
 
     elif choice == "2":
         view_notes()
+
 
     elif choice == "3":
         print("Goodbye!")
