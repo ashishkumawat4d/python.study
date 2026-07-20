@@ -6,7 +6,7 @@ def rolldice():
 
 
 while True:
-    choice = choice = input("Press Enter to roll the dice  ")
+    choice  = input("Press Enter to roll the dice  ")
 
     number = rolldice()
     print(f"You rolled: {number}")
